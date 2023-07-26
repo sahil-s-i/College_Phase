@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    /* height: 850px; */
+    height: 530px;
+    background-image: url('bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    font-size: 4em;
+    color: white;
+    padding-top: 31px;
+}
+
+.fa-eye {
+    cursor: pointer;
+    position: fixed;
+    top: 55%;
+    left: 78%;
+}
+
+.wrapper {
+    position: relative;
+    top: 10%;
+    left: 34%;
+    width: 460px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #132938;
+    text-align: center;
+}
+
+.s h2 {
+    margin: 0px 0px;
+    padding: 12px 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box
+}
+
+.stud-btn {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.stud-btn .student {
+    width: 15vw;
+    display: flex;
+    padding: 0px 0px;
+    justify-content: space-between;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 450;
+    padding: 23px 54px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 6px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: white;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 38%;
+    height: 43px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+}
+
+.login-register {
+    font-size: .9em;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin: 5px 0 10px;
+}
+
+.login-register p a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p {
+    margin-top: 16px;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+.stud-btn input {
+    accent-color: #162938;
+    margin: 0px 4px
+}
