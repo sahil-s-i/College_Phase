@@ -11,7 +11,7 @@ https://sahil-s-i.github.io/Log_in_page/
 VISIT  ➡️:  [CLICK ME !!](https://sahil-s-i.github.io/Log_in_page/)
 <sup><sub>Hover to underline</sub></sup>
 
-visit 2 : [ :arrow_upper_right: Visit2](https://sahil-s-i.github.io/Log_in_page/)
+visit 2 : [ :arrow_upper_right: Click ME !!!](https://sahil-s-i.github.io/Log_in_page/)
 
 
 Visit3 : [here &rarr;](https://www.google.com)
