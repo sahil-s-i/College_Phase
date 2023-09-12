@@ -10,54 +10,52 @@
 </head>
 
 <body>
-    <!-- <div class="background-image"></div> -->
     <header>
         <h2 class="logo">Where Everything Connects </h2>
-        <!-- <button class="btnLogin-popup">Login</button> -->
     </header>
 
     <div class="wrapper">
         <div class="s">
-            <h2>Welcome To Student Portal</h2>
-            <form action="#">
+            <h2>Welcome To Portal</h2>
+            <form>
+
                 <div class="stud-btn">
-                    <div class="student">
-                        <div>
-                            <label for="#">
-                                <input type="radio" class="rd-bt" id="std" name="name" value="Student" autocomplete="off" >Student</input>
-                            </label>
-                        </div>
-                        <div>
-                            <label for="#">
-                                <input type="radio" class="rd-bt" id="fac" name="name" value="Faculty" autocomplete="off" >Faculty</input>
-                            </label>
-                        </div>
-                    </div>
+                    <input type="radio" name="userType" id="option-1" value="student" autocomplete="off">
+                    <input type="radio" name="userType" id="option-2" value="faculty" autocomplete="off">
+                    <label for="option-1" class="option option-1">
+                        <div class="dot"></div>
+                        <span>Student</span>
+                    </label>
+                    <label for="option-2" class="option option-2">
+                        <div class="dot"></div>
+                        <span>Teacher</span>
+                    </label>
                 </div>
+
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="text" name="Username" autocomplete="off" required>
+                    <input type="text" name="Username" autocomplete="off" id="email" required>
                     <label>Email/Username</label>
                 </div>
                 <div class="input-box">
-                    <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
-                    <i class="far fa-eye" id="togglePassword" style="margin-left: 0px; cursor: pointer;"></i>
+                    <input type="password" name="password" autocomplete="current-password" id="password" required>
+                    <i class="far fa-eye" id="togglePassword"
+                        style="margin-left:0px; cursor: pointer; margin-top: 14px;"></i>
                     <label>Password</label>
                 </div>
                 <div class="remember-forgot">
                     <label>
-                        <input type="checkbox">Remember Me
+                        <input type="checkbox" autocomplete="off">Remember Me
                     </label>
-                    <a href="">Forget Password?</a>
-                </div>
-                <div class="buttons">
-                    <button type="submit" class="btn">Login</button>
-                </div>
-
-                <div class="login-register">
-                    <p>Don't have an account? <a href="" class="register-link">Register</a></p>
+                    <a href="/KALLANGOUDA/Password.html">Forget Password?</a>
                 </div>
             </form>
+            <div class="buttons">
+                <button type="submit" class="btn" onclick="login()">Login</button>
+            </div>
+            <div class="login-register">
+                <p>Don't have an account? <span id="res" onclick="register()">Register </span></p>
+            </div>
         </div>
     </div>
 
