@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +9,6 @@
 }
 
 body {
-    /* height: 850px; */
     height: 530px;
     background-image: url('bg.jpg');
     background-position: center;
@@ -25,13 +25,9 @@ header {
     font-size: 4em;
     color: white;
     padding-top: 31px;
-}
-
-.fa-eye {
-    cursor: pointer;
-    position: fixed;
-    top: 55%;
-    left: 78%;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    text-shadow: black 7px 2px 8px;
 }
 
 .wrapper {
@@ -65,24 +61,103 @@ header {
 
 .s h2 {
     margin: 0px 0px;
-    padding: 12px 0px;
+    padding: 23px 42px;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box
 }
 
-.stud-btn {
+/* The radio buttons code  */
 
-    display: flex;
-    flex-direction: row;
+
+.stud-btn {
+    display: inline-flex;
+    /* background: #fff; */
+    height: 55px;
+    width: 297px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    /* padding: 16px 6px; */
+    /* box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2); */
+    font-family: 'Lato', sans-serif;
 }
 
-.stud-btn .student {
-    width: 15vw;
+.stud-btn .option {
+    /* background: #fff; */
+    height: 90%;
+    width: 100%;
     display: flex;
-    padding: 0px 0px;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 14px;
+    /* border: 2px solid rgb(228, 223, 223); */
+    transition: all 0.3s ease;
+}
+
+.stud-btn .option .dot {
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+}
+
+.stud-btn .option .dot::before {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    /* background: #0069d9; */
+    background: #8ea1af;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#option-1:checked:checked~.option-1,
+#option-2:checked:checked~.option-2 {
+    border-color: #162938;
+    /* background: #162938; */
+}
+
+#option-1:checked:checked~.option-1 .dot,
+#option-2:checked:checked~.option-2 .dot {
+    background: #fff;
+}
+
+#option-1:checked:checked~.option-1 .dot::before,
+#option-2:checked:checked~.option-2 .dot::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.stud-btn .option span {
+    font-size: 20px;
+    /* color: #808080; */
+    color: #162938;
+    padding: 0px 8px;
+}
+
+#option-1:checked:checked~.option-1 span,
+#option-2:checked:checked~.option-2 span {
+    color: #fff;
+}
+
+.fa-eye {
+    cursor: pointer;
+    position: fixed;
+    top: 58%;
+    left: 78%;
 }
 
 .input-box {
@@ -118,7 +193,7 @@ header {
     border: none;
     outline: none;
     font-size: 1em;
-    color: #162938;
+    color: #cec9c9;
     font-weight: 450;
     padding: 23px 54px 0 5px;
 }
@@ -172,6 +247,30 @@ header {
     font-size: 16px;
     color: white;
     font-weight: 400;
+    overflow: hidden;
+}
+
+.buttons span {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
 }
 
 .login-register {
@@ -182,7 +281,7 @@ header {
     margin: 5px 0 10px;
 }
 
-.login-register p a {
+.login-register p #res {
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -192,7 +291,8 @@ header {
     margin-top: 16px;
 }
 
-.login-register p a:hover {
+.login-register p #res:hover {
+    cursor: pointer;
     text-decoration: underline;
 }
 
